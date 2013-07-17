@@ -53,7 +53,7 @@ public class League extends JavaPlugin {
         return lobbyHandler;
     }
 
-    public String chatTemplate(String message, ChatColor color){
+    public static String chatTemplate(String message, ChatColor color){
         return ChatColor.WHITE + "[" + ChatColor.DARK_RED + "LoL" + ChatColor.WHITE + "] " + color + message;
     }
 
