@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="bukkit-1.6.2-R0.1-20130715.060132-5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/bukkit-1.6.2-R0.1-20130715.060132-5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/libs/bukkit-1.6.2-R0.1-20130715.060132-5.jar!/" />
+    </SOURCES>
+  </library>
+</component>
