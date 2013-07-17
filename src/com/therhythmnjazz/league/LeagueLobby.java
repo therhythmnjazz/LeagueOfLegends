@@ -30,17 +30,17 @@ public class LeagueLobby {
     }
 
     public void addPlayerToLobby(String playerName) {
-        sendMessageToAllPlayers(playerName + " has joined the lobby.");
-        currentPlayers = currentPlayers + 1;
-        activePlayers.put(playerName, currentPlayers);
-        if (!(inProgress)) {
-            runPreGameCountCheck();
-        }
-    }
+                sendMessageToAllPlayers(playerName + " has joined the lobby.");
+                currentPlayers = currentPlayers + 1;
+                activePlayers.put(playerName, currentPlayers);
+                if (!(inProgress)) {
+                    runPreGameCountCheck();
+                }
+            }
 
-    private void sendMessageToAllPlayers(String s) {
-        for (String player : activePlayers.keySet()) {
-            Player p = Bukkit.getServer().getPlayer(player);
+        private void sendMessageToAllPlayers(String s) {
+            for (String player : activePlayers.keySet()) {
+                Player p = Bukkit.getServer().getPlayer(player);
             p.sendMessage(League.chatTemplate(s, ChatColor.WHITE));
         }
     }
