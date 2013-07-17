@@ -1,6 +1,7 @@
 package com.therhythmnjazz.league;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
@@ -40,7 +41,7 @@ public class LeagueLobby {
     private void sendMessageToAllPlayers(String s) {
         for (String player : activePlayers.keySet()) {
             Player p = Bukkit.getServer().getPlayer(player);
-            p.sendMessage(this.plugin.getChatTemplate() + s);
+            p.sendMessage(League.chatTemplate(s, ChatColor.WHITE));
         }
     }
 
@@ -124,7 +125,7 @@ public class LeagueLobby {
     public void sendMessageToPlayer(String playerName, String message) {
         Player player = Bukkit.getServer().getPlayer(playerName);
 
-        player.sendMessage(this.plugin.getChatTemplate() + message);
+        player.sendMessage(League.chatTemplate(message, ChatColor.WHITE));
 
         player = null;
     }
