@@ -19,8 +19,8 @@ public class League extends JavaPlugin {
         return lobbyHandler;
     }
 
-    public String getChatTemplate() {
-        return ChatColor.WHITE + "[" + ChatColor.DARK_RED + "] ";
+    public String chatTemplate(String message, ChatColor color){
+        return ChatColor.WHITE + "[" + ChatColor.DARK_RED + "LoL" + ChatColor.WHITE + "] " + color + message;
     }
 
 }

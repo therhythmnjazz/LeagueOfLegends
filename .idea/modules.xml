@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SuperCraftBros.iml" filepath="$PROJECT_DIR$/SuperCraftBros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeagueOfLegends.iml" filepath="$PROJECT_DIR$/LeagueOfLegends.iml" />
     </modules>
   </component>
 </project>
