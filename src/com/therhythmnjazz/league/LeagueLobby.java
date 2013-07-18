@@ -12,6 +12,7 @@ public class LeagueLobby {
     private final String matchType;
 
     private HashMap <String, Integer> activePlayers = new HashMap <String, Integer>();
+    private HashMap <String, Integer> bannedPlayers = new HashMap <String, Integer>();
     private HashMap <String, Integer> teamOnePlayers = new HashMap <String, Integer>();
     private HashMap <String, Integer> teamTwoPlayers = new HashMap <String, Integer>();
 
@@ -30,13 +31,15 @@ public class LeagueLobby {
     }
 
     public void addPlayerToLobby(String playerName) {
-                sendMessageToAllPlayers(playerName + " has joined the lobby.");
-                currentPlayers --;
-                activePlayers.put(playerName, currentPlayers);
-                if (!(inProgress)) {
-                    runPreGameCountCheck();
-                }
+        if(!bannedPlayers.containsKey(playerName)){
+            sendMessageToAllPlayers(playerName + " has joined the lobby.");
+            currentPlayers --;
+            activePlayers.put(playerName, currentPlayers);
+            if (!(inProgress)) {
+                runPreGameCountCheck();
             }
+        }
+    }
 
         private void sendMessageToAllPlayers(String s) {
             for (String player : activePlayers.keySet()) {
@@ -55,12 +58,27 @@ public class LeagueLobby {
         }
     }
 
-    public void kickPlayerFromLobby(String playerName) {
-
+    public void kickPlayerFromLobby(String playerName, String reason) {
+        if(activePlayers.containsKey(playerName)){
+            sendMessageToAllPlayers(playerName + " has been kicked from the lobby");
+            plugin.getServer().getPlayer(playerName).sendMessage("You have been kicked from the lobby for " + ChatColor.BLUE + reason);
+            activePlayers.remove(playerName);
+            if(!(inProgress)){
+                runPreGameCountCheck();
+            }
+        }
     }
 
-    public void banPlayerFromLobby(String playerName) {
-
+    public void banPlayerFromLobby(String playerName, String reason) {
+        if(!bannedPlayers.containsKey(playerName)){
+            sendMessageToAllPlayers(playerName + " has been banned from the lobby");
+            plugin.getServer().getPlayer(playerName).sendMessage("You have been banned from the lobby for " + ChatColor.BLUE + reason);
+            bannedPlayers.put(playerName, currentPlayers);
+            activePlayers.remove(playerName);
+            if(!(inProgress)){
+                runPreGameCountCheck();
+            }
+        }
     }
 
     public void runPreGameCountCheck() {
