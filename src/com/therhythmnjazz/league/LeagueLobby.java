@@ -31,7 +31,7 @@ public class LeagueLobby {
 
     public void addPlayerToLobby(String playerName) {
                 sendMessageToAllPlayers(playerName + " has joined the lobby.");
-                currentPlayers = currentPlayers + 1;
+                currentPlayers --;
                 activePlayers.put(playerName, currentPlayers);
                 if (!(inProgress)) {
                     runPreGameCountCheck();
@@ -46,7 +46,13 @@ public class LeagueLobby {
     }
 
     public void removePlayerFromLobby(String playerName) {
-
+        if(activePlayers.containsKey(playerName)){
+            sendMessageToAllPlayers(playerName + " has left the lobby");
+            activePlayers.remove(playerName);
+            if(!(inProgress)){
+                runPreGameCountCheck();
+            }
+        }
     }
 
     public void kickPlayerFromLobby(String playerName) {
