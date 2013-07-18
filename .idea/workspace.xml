@@ -10,9 +10,9 @@
     <file path="/League.java" changelist="799d2cdc-da3b-4121-8f55-65e898522ade" time="1374080368829" ignored="false" />
     <file path="/LeagueChampion.java" changelist="799d2cdc-da3b-4121-8f55-65e898522ade" time="1374074410208" ignored="false" />
     <file path="/LeagueLobbyHandler.java" changelist="799d2cdc-da3b-4121-8f55-65e898522ade" time="1374057318189" ignored="false" />
-    <file path="/LeagueLobby.java" changelist="799d2cdc-da3b-4121-8f55-65e898522ade" time="1374137950698" ignored="false" />
+    <file path="/LeagueLobby.java" changelist="799d2cdc-da3b-4121-8f55-65e898522ade" time="1374138022974" ignored="false" />
     <file path="/README.md" changelist="799d2cdc-da3b-4121-8f55-65e898522ade" time="1374077536605" ignored="false" />
-    <file path="/Dummy.txt" changelist="799d2cdc-da3b-4121-8f55-65e898522ade" time="1374136856584" ignored="false" />
+    <file path="/Dummy.txt" changelist="799d2cdc-da3b-4121-8f55-65e898522ade" time="1374137978325" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <file leaf-file-name="LeagueLobby.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/therhythmnjazz/league/LeagueLobby.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="39" selection-start="2400" selection-end="2400" vertical-scroll-proportion="1.8298612">
+            <state line="75" column="51" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.5902778">
               <folding>
                 <element signature="e#319#336#0" expanded="true" />
                 <element signature="e#406#423#0" expanded="true" />
@@ -369,7 +369,11 @@
       <created>1374136861469</created>
       <updated>1374136861469</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Completed Methods">
+      <created>1374137981302</created>
+      <updated>1374137981302</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -445,7 +449,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed Remove From Lobby" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Methods" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -465,6 +469,7 @@
     <MESSAGE value="Fixed messages in leauge lobby" />
     <MESSAGE value="Re-Added LoL iml file" />
     <MESSAGE value="Completed Remove From Lobby" />
+    <MESSAGE value="Completed Methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -538,7 +543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/therhythmnjazz/league/LeagueLobby.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="39" selection-start="2400" selection-end="2400" vertical-scroll-proportion="1.8298612">
+        <state line="75" column="51" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.5902778">
           <folding>
             <element signature="e#319#336#0" expanded="true" />
             <element signature="e#406#423#0" expanded="true" />

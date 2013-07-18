@@ -33,7 +33,7 @@ public class LeagueLobby {
     public void addPlayerToLobby(String playerName) {
         if(!bannedPlayers.containsKey(playerName)){
             sendMessageToAllPlayers(playerName + " has joined the lobby.");
-            currentPlayers --;
+            currentPlayers ++;
             activePlayers.put(playerName, currentPlayers);
             if (!(inProgress)) {
                 runPreGameCountCheck();
@@ -52,6 +52,7 @@ public class LeagueLobby {
         if(activePlayers.containsKey(playerName)){
             sendMessageToAllPlayers(playerName + " has left the lobby");
             activePlayers.remove(playerName);
+            currentPlayers --;
             if(!(inProgress)){
                 runPreGameCountCheck();
             }
@@ -63,6 +64,7 @@ public class LeagueLobby {
             sendMessageToAllPlayers(playerName + " has been kicked from the lobby");
             plugin.getServer().getPlayer(playerName).sendMessage("You have been kicked from the lobby for " + ChatColor.BLUE + reason);
             activePlayers.remove(playerName);
+            currentPlayers --;
             if(!(inProgress)){
                 runPreGameCountCheck();
             }
@@ -75,6 +77,7 @@ public class LeagueLobby {
             plugin.getServer().getPlayer(playerName).sendMessage("You have been banned from the lobby for " + ChatColor.BLUE + reason);
             bannedPlayers.put(playerName, currentPlayers);
             activePlayers.remove(playerName);
+            currentPlayers --;
             if(!(inProgress)){
                 runPreGameCountCheck();
             }
